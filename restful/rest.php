@@ -15,7 +15,7 @@
 
     function show_data(){
         $mydb = new db("sucubus","","test",false);
-        json_encode($mydb->query("SELECT * FROM customer"));
+        echo json_encode($mydb->query("SELECT * FROM customer"));
         $mydb->close();
         
     }
