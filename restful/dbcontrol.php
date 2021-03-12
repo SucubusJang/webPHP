@@ -8,8 +8,8 @@ class db{
         $this->db = new mysqli("localhost",$user,$pass,$dbname);
         $this ->db->set_charset("utf8");
         //check conntion
-        if($this->connect_errno){
-            echo "Fail to connect to MYSQL: ".$this->connect_error;
+        if($this->db->connect_errno){
+            echo "Fail to connect to MYSQL: ".$this->db->connect_error;
             exit();
         }else{
             $this->debug_text("Connect Sucess...");
