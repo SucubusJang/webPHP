@@ -25,7 +25,7 @@ class db{
         $result = $this->db->query($sql);
         $this->debug_text($sql);
         $data = $result->fetch_all(MYSQLI_ASSOC);
-        $this->debug_text(var_dump($data));
+        $this->debug_text(print_r($data));
         return $data;
     }
     function close(){
