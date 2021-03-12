@@ -3,7 +3,6 @@
     include_once("util.php");
     $debug_mode = true;
     
-
     if($_SERVER['REQUEST_METHOD'] == 'GET'){ # select
         debug_text("for GET Method" ,$debug_mode); 
         show_data();
