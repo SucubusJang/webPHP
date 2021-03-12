@@ -24,7 +24,6 @@ class db{
         $result = $this->db->fetch_all(MYSQLI_ASSOC);
         $this->debug_text($result,$mode);
         return $result;
-
     }
 }
 $mydb = new db("sucubus","","test",true);
