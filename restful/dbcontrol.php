@@ -5,7 +5,7 @@ class db{
     function __construct($user, $pass, $dbname, $debug){ #query insert,update,delete,selcet || connect,disconncet
         $this->debug = $debug;
         $this->db = new mysqli("localhost",$user,$pass,$dbname);
-        $this ->set_charset("utf8");
+        $this ->db->set_charset("utf8");
         //check conntion
         if($this->connect_errno){
             echo "Fail to connect to MYSQL: ".$this->connect_error;
