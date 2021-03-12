@@ -1,4 +1,5 @@
 <?php
+echo "test";
 class db{
     private $db;
     function _construct($user, $pass, $dbname, $debug){ #query insert,update,delete,selcet || connect,disconncet
