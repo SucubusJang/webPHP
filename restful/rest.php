@@ -1,7 +1,7 @@
 <?php
     include_once("dbcontrol.php");
     include_once("util.php");
-    $debug_mode = true;
+    $debug_mode = false;
     
     if($_SERVER['REQUEST_METHOD'] == 'GET'){ # select
         debug_text("for GET Method" ,$debug_mode); 
