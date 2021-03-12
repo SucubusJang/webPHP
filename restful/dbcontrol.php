@@ -1,9 +1,10 @@
 <?php
-echo "test";
+
 class db{
     private $db;
     function _construct($user, $pass, $dbname, $debug){ #query insert,update,delete,selcet || connect,disconncet
-        $this->db = new mysqli("localhost",$user,$pass,$dbname,$debug);
+       echo "test"; 
+       $this->db = new mysqli("localhost",$user,$pass,$dbname,$debug);
         $this -> set_charset("utf8");
         //check conntion
         if($this->connect_errno){
