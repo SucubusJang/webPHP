@@ -15,6 +15,12 @@ class db{
             $this->debug_text("Connect Sucess...");
         }
     } 
+    function debug_text($text){
+        if($this->debug){
+            // if true debug text on for track any
+            echo "Debug :{$text}<br>";
+        }
+    }
     function query($sql){
         $result = $this->db->query($sql);
         $this->debug_text($sql);
