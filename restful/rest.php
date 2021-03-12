@@ -5,7 +5,7 @@
     
     if($_SERVER['REQUEST_METHOD'] == 'GET'){ # select
         debug_text("for GET Method" ,$debug_mode); 
-        show_data();
+        show_data($debug_mode);
     }else if($_SERVER['REQUEST_METHOD'] == 'POST'){ # insert , update , delete
         debug_text("for POST Method", $debug_mode);
     }else{
@@ -13,8 +13,8 @@
         http_response_code(405);
     }
 
-    function show_data(){
-        $mydb = new db("sucubus","","test",false);
+    function show_data($debug_mode){
+        $mydb = new db("sucubus","","test",$debug_mode);
         echo json_encode($mydb->query("SELECT * FROM customer"));
         $mydb->close();
         
