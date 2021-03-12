@@ -3,7 +3,6 @@
 class db{
     private $db;
     function _construct($user, $pass, $dbname, $debug){ #query insert,update,delete,selcet || connect,disconncet
-       echo "test"; 
        $this->db = new mysqli("localhost",$user,$pass,$dbname,$debug);
         $this -> set_charset("utf8");
         //check conntion
@@ -11,7 +10,8 @@ class db{
             echo "Fail to connect to MYSQL: ".$this->connect_error;
             exit();
         }else{
-            $this->debug_text("Connect Sucess...", $debug);
+            echo "ddddd";
+            //$this->debug_text("Connect Sucess...", $debug);
         }
     } 
     function debug_text($text ,$mode){
