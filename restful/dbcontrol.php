@@ -32,5 +32,5 @@ class db{
         $this->db->close();
     }
 }
-$mydb = new db("sucubus","","test",true);
+$mydb = new db("sucubus","","test",false);
 ?>
