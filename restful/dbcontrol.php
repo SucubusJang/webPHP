@@ -27,5 +27,5 @@ class db{
 
     }
 }
-$mydb = new db("root","","test",true);
+$mydb = new db("sucubus","1236547","test",true);
 ?>
