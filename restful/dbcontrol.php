@@ -2,6 +2,7 @@
 
 class db{
     private $db;
+    private $debug;
     function __construct($user, $pass, $dbname, $debug){ #query insert,update,delete,selcet || connect,disconncet
         $this->debug = $debug;
         $this->db = new mysqli("localhost",$user,$pass,$dbname);
@@ -11,7 +12,7 @@ class db{
             echo "Fail to connect to MYSQL: ".$this->connect_error;
             exit();
         }else{
-            $this->debug_text("Connect Sucess...", $debug);
+            $this->debug_text("Connect Sucess...");
         }
     } 
     function query($sql){
