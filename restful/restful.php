@@ -20,6 +20,11 @@
                     data = JSON.parse(this.responseText);
                     out = document.getElementById("out");
                     console.log(out.length);
+                    text="";
+                    for(i=0;i<data.length;i++){
+                        text += data[i];
+                    }   
+                    alert(text);
                 }
             }
             xhttp.open("GET", "rest.php", true);
