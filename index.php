@@ -64,7 +64,7 @@
         function load_movie_content() {
             var n = document.getElementById("Movie_Title");
             var y = document.getElementById("sel_year");
-            document.getElementById("name").innerHTML = "Hello Dolly.";
+            document.getElementById("name").appendChild = "Hello Dolly.";
             vdocument.getElementById("year");
             name.value = n.value;
             year.value = y.value; 
