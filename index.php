@@ -24,16 +24,20 @@
         let jsonEx;
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
-            doc = document.getElementById("Movie_Title");
-            var option = document.createElement("option");
-            option.text = "N/A";
-            doc.add(option);
-            console.log(jsonEx);
-            for(i = 0 ; i< jsonEx.length ;i++){
-                var option = document.createElement("option");
-                option.text = jsonEx[i].title;
-                doc.add(option);
+        
+            for(i= 0;i<jsonEx.length;i++){
+                jsonEx[i].year;
             }
+            // doc = document.getElementById("Movie_Title");
+            // var option = document.createElement("option");
+            // option.text = "N/A";
+            // doc.add(option);
+            // console.log(jsonEx);
+            // for(i = 0 ; i< jsonEx.length ;i++){
+            //     var option = document.createElement("option");
+            //     option.text = jsonEx[i].title;
+            //     doc.add(option);
+            // }
             //alert("Load Json Compleated");
             return jsonEx;
         }
