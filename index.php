@@ -62,12 +62,12 @@
         }
 
         function load_movie_content() {
-            var n = document.getElementById("Movie_Title");
-            var y = document.getElementById("sel_year");
+            // var n = document.getElementById("Movie_Title");
+            // var y = document.getElementById("sel_year");
             document.getElementById("name").appendChild = "Hello Dolly.";
-            vdocument.getElementById("year");
-            name.value = n.value;
-            year.value = y.value; 
+            // vdocument.getElementById("year");
+            // name.value = n.value;
+            // year.value = y.value; 
             // var doc = document.getElementById("out");
             // var txt = document.createElement("input");
             // var year = document.getElementById("sel_year");
