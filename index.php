@@ -33,7 +33,7 @@
             var movie_year = new Set();
             var doc = document.getElementById("sel_year");
             for (i = 0; i < jsonEx.length; i++) {
-                console.log(jsonEx[i]);
+                console.log(jsonEx);
                 movie_year.add(jsonEx[i].year);
             }
             //alert("Total Year "+ movie_year.size);
