@@ -31,7 +31,7 @@
                 movie_year.add(jsonEx[i].year);
             }
             //alert("Total Year "+ movie_year.size);
-            const ref_year =movie_year.values();
+            const ref_year = movie_year.values();
             for (y = 0; y < movie_year.size; y++) {
                 var ooption = document.createElement("option");
                 option.text = ref_year.next().value;
