@@ -23,7 +23,8 @@
         <option value="">N/A</option>
     </select><br>
     <div id="out"></div>
-
+    <input type="text" name="" id="name">
+    <input type="text" name="" id="year">
     <script>
         let jsonEx;
 
@@ -54,13 +55,19 @@
             for (i = 0; i < jsonEx.length; i++) {
                 if (jsonEx[i].year == y.value) {
                     var option = document.createElement("option");
-                    option.text = jsonEx[i].year+":"+jsonEx[i].title;
+                    option.text = jsonEx[i].year + ":" + jsonEx[i].title;
                     doc.add(option);
                 }
             }
         }
 
         function load_movie_content() {
+            var n = document.getElementById("Movie_Title");
+            var y = document.getElementById("sel_year");
+            var name = document.getElementById("name");
+            var year = document.getElementById("year");
+            name.value = n.value;
+            year.value = y.value; 
             // var doc = document.getElementById("out");
             // var txt = document.createElement("input");
             // var year = document.getElementById("sel_year");
