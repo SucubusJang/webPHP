@@ -23,15 +23,15 @@
                     data = JSON.parse(this.responseText);
                     out = document.getElementById("out");
                     console.log(data.length);
-                    text="";
+                    text="<table border='1'></table>";
                     for(i=0;i<data.length;i++){
                         // text += data[i];
-                        for(info in data[i]){
-                           text += data[i][info]+" ";
+                        for(info in data[i]){ 
+                           text += "<td>"+data[i][info]+"</td>";
                         }
                         text+="\n";
                     }   
-                    out.innerHTML = text;
+                    out.innerHTML = text+"</table>";
                 }
             }
             xhttp.open("GET", "rest.php", true);
