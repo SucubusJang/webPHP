@@ -30,6 +30,7 @@
             doc.add(option);
             console.log(jsonEx);
             for(i = 0 ; i< jsonEx.length ;i++){
+                var option = document.createElement("option");
                 opttion.text = jsonEx[i].title;
                 doc.add(option);
             }
