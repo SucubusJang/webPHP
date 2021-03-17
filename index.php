@@ -65,10 +65,13 @@
         function load_movie_content() {
             var doc = document.getElementById("out");
             var txt = document.createElement("input");
-            txt.value = "Movie Title";
+            var year = document.getElementById("sel_year");
+            var name = document.getElementById("Movie_Title");
+            doc.innerHTML = " ";
+            txt.value = name;
             doc.appendChild(txt);
             var txt = document.createElement("TextArea");
-            txt.value = "Movie Title";
+            txt.value = name;
             doc.appendChild(txt);
 
         }
