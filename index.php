@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <h2>SucubusJang</h2>
+    <?php
+        $jsonfile = file_get_contents("movies.json");
+    ?>
+    
 </body>
 </html>
