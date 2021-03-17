@@ -31,7 +31,7 @@
             doc.add(option);
             console.log(jsonEx);
             for(i = 0 ; i< jsonEx.length ;i++){
-                opttion.text = movie_info["title"];
+                opttion.text = jsonEx[i].title;
                 doc.add(option);
             }
             //alert("Load Json Compleated");
