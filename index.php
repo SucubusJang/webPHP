@@ -24,9 +24,9 @@
         let jsonEx;
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
-        var a = new Set();
+        var movie_year = new Set();
             for(i= 0;i<jsonEx.length;i++){
-                jsonEx[i].year;
+                movie_year.add(jsonEx[i].year);
             }
             // doc = document.getElementById("Movie_Title");
             // var option = document.createElement("option");
