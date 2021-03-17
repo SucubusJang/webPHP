@@ -19,7 +19,7 @@
                     console.log(this.responseText);
                     data = JSON.parse(this.responseText);
                     out = document.getElementById("out");
-                    console.log(out.lenth);
+                    console.log(out.length);
                 }
             }
             xhttp.open("GET", "rest.php", true);
