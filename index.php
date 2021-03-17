@@ -24,7 +24,7 @@
         let jsonEx;
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
-        
+        var a = new Set();
             for(i= 0;i<jsonEx.length;i++){
                 jsonEx[i].year;
             }
