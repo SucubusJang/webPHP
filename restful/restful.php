@@ -19,7 +19,7 @@
                     console.log(this.responseText);
                     data = JSON.parse(this.responseText);
                     out = document.getElementById("out");
-                    console.log(out.length);
+                    console.log(data.length);
                     text="";
                     for(i=0;i<data.length;i++){
                         text += data[i];
