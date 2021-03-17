@@ -15,7 +15,7 @@
             xhttp.inreaystatechange = function() {
                 console.log(this.readyState+", ", this.status);
             }
-            x.http.open("GET", "rest.php", true);
+            xhttp.open("GET", "rest.php", true);
             xhttp.send();
         }
     </script>
