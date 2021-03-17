@@ -18,7 +18,8 @@
                 if(this.readyState == 4 && this.status == 200){
                     console.log(this.responseText);
                     data = JSON.parse(this.responseText);
-                    document.getElementById("out");
+                    out = document.getElementById("out");
+                    console.log(out.lenth);
                 }
             }
             xhttp.open("GET", "rest.php", true);
