@@ -64,7 +64,7 @@
         function load_movie_content() {
             // var n = document.getElementById("Movie_Title");
             // var y = document.getElementById("sel_year");
-            document.getElementById("name").value = document.getElementById("Movie_Title");
+            document.getElementById("name").value = document.getElementById("Movie_Title").value;
             // vdocument.getElementById("year");
             // name.value = n.value;
             // year.value = y.value; 
