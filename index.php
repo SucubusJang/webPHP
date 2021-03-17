@@ -23,6 +23,7 @@
 
         function load_data() {
             var jsonEx = <?= $jsonfile ?>;
+            console.log(jsonEx);
             alert("Load Json Compleated");
             return jsonEx;
         }
