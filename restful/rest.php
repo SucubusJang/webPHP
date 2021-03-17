@@ -14,7 +14,7 @@
     }
 
     function show_data($debug_mode){
-        $mydb = new db("sucubus","","test",$debug_mode);
+        $mydb = new db("localhost","","test",$debug_mode);
         echo json_encode($mydb->query("SELECT * FROM customer"));
         $mydb->close();
         
