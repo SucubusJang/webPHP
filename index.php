@@ -19,11 +19,11 @@
         <option value="">N/A</option>
     </select><br>
     movie Title : <br>
-    <select id="Movie_Title">
+    <select id="Movie_Title" onchange="load_movie_content()">
         <option value="">N/A</option>
     </select><br>
-    <input type="text" name="" id="year">
-    <input type="text" name="" id="name">
+    <!-- <input type="text" name="" id="year">
+    <input type="text" name="" id="name"> -->
     <div id="out"></div>
 
     <script>
