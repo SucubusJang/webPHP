@@ -10,7 +10,7 @@
 
 <body>
     <?php
-        $jsonfile = file_get_contents("movies.json");
+    $jsonfile = file_get_contents("movies.json");
     ?>
 
     <button onclick="load_data()">Load Data</button>
@@ -22,13 +22,21 @@
 
     <script>
         let jsonEx;
+
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
-        var movie_year = new Set();
-            for(i= 0;i<jsonEx.length;i++){
+            var movie_year = new Set();
+            var doc = document.getElementById("sel_year");
+            for (i = 0; i < jsonEx.length; i++) {
                 movie_year.add(jsonEx[i].year);
             }
-            alert("Total Year "+ movie_year.size);
+            //alert("Total Year "+ movie_year.size);
+            const ref_year =movie_year.values();
+            for (y = 0; y < movie_year.size; y++) {
+                var ooption = document.createElement("option");
+                option = ref_year.next().value;
+                doc.add(option);
+            }
             // doc = document.getElementById("Movie_Title");
             // var option = document.createElement("option");
             // option.text = "N/A";
