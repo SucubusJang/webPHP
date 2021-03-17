@@ -12,17 +12,23 @@
     <?php
         $jsonfile = file_get_contents("movies.json");
     ?>
+
     <button onclick="load_data()">Load Data</button>
     year : <br>
-    <select id=""></select><br>
+    <select id="sel_year"></select><br>
     movie Title : <br>
-    <select id=""></select><br>
+    <select id="Movie_Title"></select><br>
     <div id="out"></div>
-    <script>
-        jsonEx = load_data();
 
+    <script>
+        let jsonEx;
+        jsonEx = load_data();
         function load_data() {
-            var jsonEx = <?= $jsonfile ?>;
+            jsonEx = <?= file_get_contents("movies.json") ?>;
+            doc = document.getElementById("Movie_Title");
+            var option = document.createElement("option");
+            option.text = "N/A";
+            doc.add(option);
             console.log(jsonEx);
             alert("Load Json Compleated");
             return jsonEx;
