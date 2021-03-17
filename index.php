@@ -65,7 +65,7 @@
             var txt = document.createElement("input");
             var year = document.getElementById("sel_year");
             var name = document.getElementById("Movie_Title");
-            doc.innerHTML = " ";
+            txt.innerHTML = " ";
             txt.value = name.value;
             doc.appendChild(txt);
             var txt = document.createElement("TextArea");
