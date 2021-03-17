@@ -30,7 +30,11 @@
             option.text = "N/A";
             doc.add(option);
             console.log(jsonEx);
-            alert("Load Json Compleated");
+            for(movie_info in jsonEx){
+                opttion.text = movie_info["title"];
+                doc.add(option);
+            }
+            //alert("Load Json Compleated");
             return jsonEx;
         }
     </script>
