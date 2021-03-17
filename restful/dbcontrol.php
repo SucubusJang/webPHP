@@ -32,5 +32,5 @@ class db{
         $this->db->close();
     }
 }
-$mydb = new db("localhost","","test",false);
+$mydb = new db("root","","test",false);
 ?>
