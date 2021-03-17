@@ -69,7 +69,7 @@
             txt.value = name.value;
             doc.appendChild(txt);
             var txt = document.createElement("TextArea");
-            txt.value += name;
+            txt.value += name.value;
             doc.appendChild(txt);
 
         }
