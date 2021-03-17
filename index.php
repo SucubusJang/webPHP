@@ -19,22 +19,23 @@
         <option value="">N/A</option>
     </select><br>
     movie Title : <br>
-    <select id="Movie_Title">
+    <select id="Movie_Title" onchange="load_movie_content()">
         <option value="">N/A</option>
     </select><br>
-    Movie
+    <input type="text" name="" id="year">
+    <input type="text" name="" id="name">
     <div id="out"></div>
 
     <script>
         let jsonEx;
 
         function load_data() {
-            jsonEx = <?= file_get_contents("movies.json") ?>; 
+            jsonEx = <?= file_get_contents("movies.json") ?>;
             console.log(jsonEx);
             var movie_year = new Set();
             var doc = document.getElementById("sel_year");
             for (i = 0; i < jsonEx.length; i++) {
-               
+
                 movie_year.add(jsonEx[i].year);
             }
             //alert("Total Year "+ movie_year.size);
@@ -44,24 +45,13 @@
                 option.text = ref_year.next().value;
                 doc.add(option);
             }
-            // doc = document.getElementById("Movie_Title");
-            // var option = document.createElement("option");
-            // option.text = "N/A";
-            // doc.add(option);
-            // console.log(jsonEx);
-            // for(i = 0 ; i< jsonEx.length ;i++){
-            //     var option = document.createElement("option");
-            //     option.text = jsonEx[i].title;
-            //     doc.add(option);
-            // }
-            //alert("Load Json Compleated");
             return jsonEx;
         }
 
         function load_title() {
             var doc = document.getElementById("Movie_Title");
             var y = document.getElementById("sel_year"); // แสดงปีที่เลือก
-           // alert(y.value);
+            // alert(y.value);
             doc.innerHTML = " ";
             for (i = 0; i < jsonEx.length; i++) {
                 if (jsonEx[i].year == y.value) {
@@ -70,6 +60,14 @@
                     doc.add(option);
                 }
             }
+        }
+
+        function load_movie_content() {
+            var doc = document.getElementById("out");
+            var txt = document.createElement("input");
+            txt.value = "Movie Title";
+            doc.appendChild(txt);
+
         }
     </script>
 
