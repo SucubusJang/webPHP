@@ -22,7 +22,6 @@
 
     <script>
         let jsonEx;
-        jsonEx = load_data();
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
             doc = document.getElementById("Movie_Title");
