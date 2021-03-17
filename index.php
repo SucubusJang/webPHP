@@ -30,7 +30,7 @@
             option.text = "N/A";
             doc.add(option);
             console.log(jsonEx);
-            for(movie_info in jsonEx){
+            for(i = 0 ; i< jsonEx.length ;i++){
                 opttion.text = movie_info["title"];
                 doc.add(option);
             }
