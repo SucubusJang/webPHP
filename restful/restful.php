@@ -9,7 +9,10 @@
 </head>
 
 <body onload="loadContent()">
-    <div id="out"></div>
+    <div id="out">
+
+
+    </div>
     <script>
         function loadContent() {
             let xhttp = new XMLHttpRequest();
@@ -28,7 +31,7 @@
                         }
                         text+="\n";
                     }   
-                    alert(text);
+                    out.innerHTML = text;
                 }
             }
             xhttp.open("GET", "rest.php", true);
