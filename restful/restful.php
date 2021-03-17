@@ -24,8 +24,9 @@
                     for(i=0;i<data.length;i++){
                         // text += data[i];
                         for(info in data[i]){
-                           text += data[i][info]+"\n";
+                           text += data[i][info]+" ";
                         }
+                        text+="\n";
                     }   
                     alert(text);
                 }
