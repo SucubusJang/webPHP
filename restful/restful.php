@@ -12,7 +12,7 @@
     <script>
         function loadContent() {
             let xhttp = new XMLHttpRequest();
-            xhttp.inreaystatechange = function() {
+            xhttp.onreadystatechange = function() {
                 console.log(this.readyState+", ", this.status);
             }
             xhttp.open("GET", "rest.php", true);
