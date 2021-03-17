@@ -19,7 +19,7 @@
     <select id=""></select><br>
     <div id="out"></div>
     <script>
-        jsonEc = load_data();
+        jsonEx = load_data();
 
         function load_data() {
             var jsonEx = <?= $jsonfile ?>;
