@@ -24,7 +24,7 @@
         function load_data() {
             var jsonEx = <?= $jsonfile ?>;
             alert("Load Json Compleated");
-            return jSonEx;
+            return jsonEx;
         }
     </script>
 
