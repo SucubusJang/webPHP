@@ -22,6 +22,7 @@
     <select id="Movie_Title">
         <option value="">N/A</option>
     </select><br>
+    Movie
     <div id="out"></div>
 
     <script>
@@ -32,6 +33,7 @@
             var movie_year = new Set();
             var doc = document.getElementById("sel_year");
             for (i = 0; i < jsonEx.length; i++) {
+                console.log(jsonEx[i]);
                 movie_year.add(jsonEx[i].year);
             }
             //alert("Total Year "+ movie_year.size);
@@ -58,7 +60,7 @@
         function load_title() {
             var doc = document.getElementById("Movie_Title");
             var y = document.getElementById("sel_year"); // แสดงปีที่เลือก
-            alert(y.value);
+           // alert(y.value);
             doc.innerHTML = " ";
             for (i = 0; i < jsonEx.length; i++) {
                 if (jsonEx[i].year == y.value) {
