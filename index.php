@@ -28,6 +28,7 @@
             for(i= 0;i<jsonEx.length;i++){
                 movie_year.add(jsonEx[i].year);
             }
+            alert("Total Year "+movie_year);
             // doc = document.getElementById("Movie_Title");
             // var option = document.createElement("option");
             // option.text = "N/A";
