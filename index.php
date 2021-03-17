@@ -15,7 +15,7 @@
 
     <button onclick="load_data()">Load Data</button>
     year : <br>
-    <select id="sel_year"></select><br>
+    <select id="sel_year" onchange="load_title()"></select><br>
     movie Title : <br>
     <select id="Movie_Title"></select><br>
     <div id="out"></div>
@@ -49,6 +49,16 @@
             // }
             //alert("Load Json Compleated");
             return jsonEx;
+        }
+        function load_title(){
+            var doc = document.getElementById("Movie_Title");
+            var y = document.getElementById("sel_year");
+            for (i = 0; i < jsonEx.length; i++) {
+                // if(jsonEx.year == )
+                // var option = document.createElement("option");
+                // option.text = jsonEx[i].title;
+                // doc.add(option);
+            }
         }
     </script>
 
