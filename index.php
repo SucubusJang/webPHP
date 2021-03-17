@@ -22,8 +22,6 @@
     <select id="Movie_Title" onchange="load_movie_content()">
         <option value="">N/A</option>
     </select><br>
-    <!-- <input type="text" name="" id="year">
-    <input type="text" name="" id="name"> -->
     <div id="out"></div>
 
     <script>
@@ -71,7 +69,7 @@
             txt.value = name.value;
             doc.appendChild(txt);
             var txt = document.createElement("TextArea");
-            txt.value = name;
+            txt.value += name;
             doc.appendChild(txt);
 
         }
