@@ -29,11 +29,12 @@
         let jsonEx;
 
         function load_data() {
-            jsonEx = <?= file_get_contents("movies.json") ?>;
+            jsonEx = <?= file_get_contents("movies.json") ?>; 
+            console.log(jsonEx);
             var movie_year = new Set();
             var doc = document.getElementById("sel_year");
             for (i = 0; i < jsonEx.length; i++) {
-                console.log(jsonEx);
+               
                 movie_year.add(jsonEx[i].year);
             }
             //alert("Total Year "+ movie_year.size);
