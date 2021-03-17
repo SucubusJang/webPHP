@@ -9,6 +9,7 @@
 </head>
 
 <body onload="loadContent()">
+    <div id="data"></div>
     <script>
         function loadContent() {
             let xhttp = new XMLHttpRequest();
@@ -17,6 +18,7 @@
                 if(this.readyState == 4 && this.status == 200){
                     console.log(this.responseText);
                     data = JSON.parse(this.responseText);
+                    document.getElementById("data");
                 }
             }
             xhttp.open("GET", "rest.php", true);
