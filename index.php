@@ -52,7 +52,8 @@
         }
         function load_title(){
             var doc = document.getElementById("Movie_Title");
-            var y = document.getElementById("sel_year");
+            var y = document.getElementById("sel_year"); // แสดงปีที่เลือก
+            alert(y.value);
             for (i = 0; i < jsonEx.length; i++) {
                 // if(jsonEx.year == )
                 // var option = document.createElement("option");
