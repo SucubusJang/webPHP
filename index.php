@@ -50,15 +50,18 @@
             //alert("Load Json Compleated");
             return jsonEx;
         }
-        function load_title(){
+
+        function load_title() {
             var doc = document.getElementById("Movie_Title");
             var y = document.getElementById("sel_year"); // แสดงปีที่เลือก
             alert(y.value);
+            //y.innerHTML = " ";
             for (i = 0; i < jsonEx.length; i++) {
-                // if(jsonEx.year == )
-                // var option = document.createElement("option");
-                // option.text = jsonEx[i].title;
-                // doc.add(option);
+                if (jsonEx.year == y.value) {
+                    var option = document.createElement("option");
+                    option.text = jsonEx[i].title;
+                    doc.add(option);
+                }
             }
         }
     </script>
