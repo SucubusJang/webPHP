@@ -54,23 +54,23 @@
             for (i = 0; i < jsonEx.length; i++) {
                 if (jsonEx[i].year == y.value) {
                     var option = document.createElement("option");
-                    option.text = jsonEx[i].title;
+                    option.text = jsonEx[i].year+":"+jsonEx[i].title;
                     doc.add(option);
                 }
             }
         }
 
         function load_movie_content() {
-            var doc = document.getElementById("out");
-            var txt = document.createElement("input");
-            var year = document.getElementById("sel_year");
-            var name = document.getElementById("Movie_Title");
-            txt.innerHTML = " ";
-            txt.value = name.value;
-            doc.appendChild(txt);
-            var txt = document.createElement("TextArea");
-            txt.value += name.value;
-            doc.appendChild(txt);
+            // var doc = document.getElementById("out");
+            // var txt = document.createElement("input");
+            // var year = document.getElementById("sel_year");
+            // var name = document.getElementById("Movie_Title");
+            // txt.innerHTML = " ";
+            // txt.value = name.value;
+            // doc.appendChild(txt);
+            // var txt = document.createElement("TextArea");
+            // txt.value += name.value;
+            // doc.appendChild(txt);
 
         }
     </script>
