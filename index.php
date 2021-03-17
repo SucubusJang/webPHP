@@ -34,7 +34,7 @@
             const ref_year =movie_year.values();
             for (y = 0; y < movie_year.size; y++) {
                 var ooption = document.createElement("option");
-                option = ref_year.next().value;
+                option.text = ref_year.next().value;
                 doc.add(option);
             }
             // doc = document.getElementById("Movie_Title");
