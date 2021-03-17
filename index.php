@@ -55,9 +55,9 @@
             var doc = document.getElementById("Movie_Title");
             var y = document.getElementById("sel_year"); // แสดงปีที่เลือก
             alert(y.value);
-            //y.innerHTML = " ";
+            doc.innerHTML = " ";
             for (i = 0; i < jsonEx.length; i++) {
-                if (jsonEx.year == y.value) {
+                if (jsonEx[i].year == y.value) {
                     var option = document.createElement("option");
                     option.text = jsonEx[i].title;
                     doc.add(option);
