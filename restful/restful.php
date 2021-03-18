@@ -23,7 +23,8 @@
                     data = JSON.parse(this.responseText);
                     out = document.getElementById("out");
                     console.log(data.length);
-                    text="<table border='1'></table>";
+                    text = "";
+                    text+="<table border='1'>";
                     for(i=0;i<data.length;i++){
                         // text += data[i];
                         for(info in data[i]){ 

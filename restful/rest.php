@@ -15,8 +15,13 @@
 
     function show_data($debug_mode){
         $mydb = new db("root","","personal",$debug_mode);
-        echo json_encode($mydb->query("INSERT INTO `customer`(`cusName`) VALUES ('{dusit}')"));
+        echo json_encode($mydb->query("SELECT * FROM customer"));
         $mydb->close();
-        
     }
+
+    // function add_data($debug_mode){
+    //     $mydb = new db("root","","personal",$debug_mode);
+    //     echo json_encode($mydb->query("INSERT * FROM customer"));
+    //     $mydb->close();
+    // }
 ?>
