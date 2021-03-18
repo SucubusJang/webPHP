@@ -26,11 +26,11 @@
                     text = "";
                     text+="<table border='1'>";
                     for(i=0;i<data.length;i++){
-                        // text += data[i];
+                        text += "<tr>";
                         for(info in data[i]){ 
                            text += "<td>"+data[i][info]+"</td>";
                         }
-                        text+="\n";
+                        text+="</tr>\n";
                     }   
                     out.innerHTML = text+"</table>";
                 }

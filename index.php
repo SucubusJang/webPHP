@@ -12,8 +12,7 @@
     <?php
     $jsonfile = file_get_contents("movies.json");
     ?>
-
-    <button onclick="load_data()">Load Data</button>
+    <button onclick="load_data()">Load Data</button><br>
     year : <br>
     <select id="sel_year" onchange="load_title()">
         <option value="">N/A</option>
@@ -23,18 +22,15 @@
         <option value="">N/A</option>
     </select><br>
     <div id="out"></div>
-    <input type="text" name="" id="name">
-    <input type="text" name="" id="year">
     <script>
         let jsonEx;
-
+        let txt ="";
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
             console.log(jsonEx);
             var movie_year = new Set();
             var doc = document.getElementById("sel_year");
             for (i = 0; i < jsonEx.length; i++) {
-
                 movie_year.add(jsonEx[i].year);
             }
             //alert("Total Year "+ movie_year.size);
@@ -62,9 +58,28 @@
         }
 
         function load_movie_content() {
-            // var n = document.getElementById("Movie_Title");
-            // var y = document.getElementById("sel_year");
-            document.getElementById("name").value = document.getElementById("Movie_Title").value;
+            var doc = document.getElementById("out");
+            var str = document.getElementById("Movie_Title").value;
+            var year = str.substring(0,4);
+            var str2 = document.getElementById("Movie_Title").value;
+            var movie = str2.substring(5);
+            var input1 = document.createElement("input");
+            var input2 = document.createElement("input");
+            var area = document.createElement("textarea");
+            doc.innerHTML = "";
+            input1.value = year;
+            input2.value = movie;
+            txt += movie;
+            txt += "\n";
+            area.value = txt;
+            alert(area.value);
+            doc.appendChild(input1);
+            doc.appendChild(input2);
+            doc.appendChild(area);
+            // var txt = document.createElement("input");
+            // txt.value = movie.value;
+            // doc.appendCild(txt);
+            //document.getElementById("name").value = movie;
             // vdocument.getElementById("year");
             // name.value = n.value;
             // year.value = y.value; 
