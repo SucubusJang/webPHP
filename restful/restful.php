@@ -35,9 +35,10 @@
                     out.innerHTML = text+"</table>";
                 }
             }
-            xhttp.open("GET", "rest.php", true);
+            xhttp.open("POST", "rest.php", true);
             xhttp.send();
         }
+
     </script>
 </body>
 
