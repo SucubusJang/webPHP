@@ -9,10 +9,9 @@
 </head>
 
 <body onload="loadContent()">
-    <div id="out">
-
-
-    </div>
+    <input type="text" name="" id="u_id"> <input type="text" name="" id="u_name">
+    <button onclick="add_new()">Click</button><br>
+    <div id="out"></div>
     <script>
         function loadContent() {
             let xhttp = new XMLHttpRequest();
@@ -40,7 +39,9 @@
             // xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             // xhttp.send("a=12&b=15");
         }
+        function add_new(){
 
+        }
     </script>
 </body>
 
