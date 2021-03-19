@@ -8,7 +8,7 @@
         echo json_encode(show_data($debug_mode));
     }else if($_SERVER['REQUEST_METHOD'] == 'POST'){ # insert , update
         debug_text("for POST Method", $debug_mode);
-        $message = '{"Status":"Success","Message":'+$_POST+'}';
+        $message = '{"Status":"Success"}';
         echo json_encode($message);
     }else{
         debug_text("Error Unknow this Request" ,$debug_mode);
