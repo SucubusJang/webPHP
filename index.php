@@ -65,7 +65,7 @@
             var input1 = document.createElement("input");
             var input2 = document.createElement("input");
             var area = document.createElement("textarea");
-            doc.innerHTML = "<input type='text' name='' id=''>";
+            doc.innerHTML = "<input type='text' name='' id='' value='1'>";
             input1.value = year;
             input2.value = movie;
             txt += movie;
