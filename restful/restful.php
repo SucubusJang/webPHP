@@ -23,18 +23,18 @@
                 if(this.readyState == 4 && this.status == 200){
                     console.log(this.responseText);
                     data = JSON.parse(this.responseText);
-                    out = document.getElementById("out");
-                    console.log(data.length);
-                    text = "";
-                    text+="<table border='1'>";
-                    for(i=0;i<data.length;i++){
-                        text += "<tr>";
-                        for(info in data[i]){ 
-                           text += "<td>"+data[i][info]+"</td>";
-                        }
-                        text+="</tr>\n";
-                    }   
-                    out.innerHTML = text+"</table>";
+                    // out = document.getElementById("out");
+                    // console.log(data.length);
+                    // text = "";
+                    // text+="<table border='1'>";
+                    // for(i=0;i<data.length;i++){
+                    //     text += "<tr>";
+                    //     for(info in data[i]){ 
+                    //        text += "<td>"+data[i][info]+"</td>";
+                    //     }
+                    //     text+="</tr>\n";
+                    // }   
+                    // out.innerHTML = text+"</table>";
                 }
             }
             xhttp.open("GET", "rest.php", true);
@@ -57,7 +57,7 @@
             xhttp.send("u_id="+u_id.value+"&u_name="+u_name.value); // ส่งค่า u_id และ u_name โดยถ้าส่งมากกว่า 1 ค่า ให้เชื่อมด้วย &
         }
         function create_table(){
-            
+
         }
     </script>
 </body>
