@@ -9,7 +9,10 @@
 </head>
 
 <body onload="loadContent()">
-    <input type="text" name="" id="u_id"> <input type="text" name="" id="u_name">
+    <label>ID:</label>
+    <input type="text" name="" id="u_id"> 
+    <label>Name:</label>
+    <input type="text" name="" id="u_name">
     <button onclick="add_new()">Click</button><br>
     <div id="out"></div>
     <script>
@@ -40,7 +43,18 @@
             // xhttp.send("a=12&b=15");
         }
         function add_new(){
-
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if(this.readyState == 4 &&  this.status == 200){
+                    alert(this.responseText);
+                }
+            }
+            //-------------------------------------------------------------------------------
+            xhttp.open("POST", "rest.php", true); // การส่งค่าไปหน้า rest.php
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            u_id = document.getElementById("u_id"); // นำค่ามาใส่ให้ตัวแปร u_id
+            u_name = document.getElementById("u_name"); // นำค่ามาใส่ให้ตัวแปร u_name
+            xhttp.send("u_id="+u_id.value+"&u_name="+u_name.value); // ส่งค่า u_id และ u_name โดยถ้าส่งมากกว่า 1 ค่า ให้เชื่อมด้วย &
         }
     </script>
 </body>
