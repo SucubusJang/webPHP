@@ -13,8 +13,8 @@
             $u_name = $_POST['u_name'];
             insert_data($u_id,$u_name,$debug_mode);
         }
-        $message = '{"Status":'+print_r($_POST)+'}';
-        echo json_encode($message);
+        // $message = '{"Status":'+print_r($_POST)+'}';
+        // echo json_encode($message);
     }else{
         debug_text("Error Unknow this Request" ,$debug_mode);
         http_response_code(405);
