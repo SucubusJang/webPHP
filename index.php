@@ -24,7 +24,8 @@
     <div id="out"></div>
     <script>
         let jsonEx;
-        let txt ="";
+        let txt = "";
+
         function load_data() {
             jsonEx = <?= file_get_contents("movies.json") ?>;
             console.log(jsonEx);
@@ -60,18 +61,18 @@
         function load_movie_content() {
             var doc = document.getElementById("out");
             var str = document.getElementById("Movie_Title").value;
-            var year = str.substring(0,4);
+            var year = str.substring(0, 4);
             var movie = str.substring(5);
             var input1 = document.createElement("input");
             var input2 = document.createElement("input");
             var area = document.createElement("textarea");
-            doc.innerHTML = "<input type='text' name='' id='' value=$year>";
+            //  doc.innerHTML = "<input type='text' name='' id='' value=$year>";
             input1.value = year;
             input2.value = movie;
             txt += movie;
             txt += "\n";
             area.value = txt;
-           // alert(area.value);
+            // alert(area.value);
             doc.appendChild(input1);
             doc.appendChild(input2);
             doc.appendChild(area);
