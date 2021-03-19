@@ -72,7 +72,7 @@
             txt += movie;
             txt += "\n";
             area.value = txt;
-            alert(area.value);
+           // alert(area.value);
             doc.appendChild(input1);
             doc.appendChild(input2);
             doc.appendChild(area);
