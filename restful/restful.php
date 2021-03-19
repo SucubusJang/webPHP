@@ -36,6 +36,7 @@
                 }
             }
             xhttp.open("POST", "rest.php", true);
+            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhttp.send();
         }
 
