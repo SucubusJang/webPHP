@@ -74,6 +74,7 @@
             area.value = txt;
            // alert(area.value);
             doc.appendChild(input1);
+            doc.innerHTML = "/n";
             doc.appendChild(input2);
             doc.appendChild(area);
             // var txt = document.createElement("input");
