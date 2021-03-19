@@ -28,7 +28,7 @@
 
     function insert_data($u_id ,$u_name ,$debug_mode){
         $mydb = new db("root","","personal",$debug_mode);
-        $data = $mydb->query("insert.....");
+        $data = $mydb->query_only("INSERT INTO `customer`(`CustomerID`, `CustomerName`) VALUES ('{$u_id}','{$u_name}')");
         show_data($debug_mode);
         return $data;
     }

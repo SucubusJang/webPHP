@@ -46,7 +46,7 @@
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if(this.readyState == 4 &&  this.status == 200){
-                    alert(this.responseText);
+                    console.log(this.responseText);
                 }
             }
             //-------------------------------------------------------------------------------
@@ -55,6 +55,9 @@
             u_id = document.getElementById("u_id"); // นำค่ามาใส่ให้ตัวแปร u_id
             u_name = document.getElementById("u_name"); // นำค่ามาใส่ให้ตัวแปร u_name
             xhttp.send("u_id="+u_id.value+"&u_name="+u_name.value); // ส่งค่า u_id และ u_name โดยถ้าส่งมากกว่า 1 ค่า ให้เชื่อมด้วย &
+        }
+        function create_table(){
+            
         }
     </script>
 </body>

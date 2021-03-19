@@ -28,6 +28,11 @@ class db{
         //$this->debug_text(print_r($data));
         return $data;
     }
+
+    function query_only($sql){
+        $result = $this->db->query($sql);
+       // return $result;
+    }
     function close(){
         $this->db->close();
     }
