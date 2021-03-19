@@ -35,9 +35,10 @@
                     out.innerHTML = text+"</table>";
                 }
             }
-            xhttp.open("POST", "rest.php", true);
-            xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhttp.open("GET", "rest.php", true);
             xhttp.send();
+            // xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            // xhttp.send("a=12&b=15");
         }
 
     </script>
