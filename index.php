@@ -61,12 +61,11 @@
             var doc = document.getElementById("out");
             var str = document.getElementById("Movie_Title").value;
             var year = str.substring(0,4);
-            var str2 = document.getElementById("Movie_Title").value;
-            var movie = str2.substring(5);
+            var movie = str.substring(5);
             var input1 = document.createElement("input");
             var input2 = document.createElement("input");
             var area = document.createElement("textarea");
-            doc.innerHTML = "";
+            doc.innerHTML = "<input type='text' name='' id=''>";
             input1.value = year;
             input2.value = movie;
             txt += movie;
@@ -74,7 +73,6 @@
             area.value = txt;
            // alert(area.value);
             doc.appendChild(input1);
-            doc.innerHTML = "/n";
             doc.appendChild(input2);
             doc.appendChild(area);
             // var txt = document.createElement("input");
