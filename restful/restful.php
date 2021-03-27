@@ -38,6 +38,7 @@
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     //   console.log(this.responseText);
+                    alert(this.responseText);
                     data = JSON.parse(this.responseText);
                     create_table(data);
                 }
@@ -55,6 +56,8 @@
             console.log(data.length);
             text = "";
             text += "<table border='1'>";
+           
+         
             for (i = 0; i < data.length; i++) {
                 text += "<tr>";
                 for (info in data[i]) {
